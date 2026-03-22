@@ -18,6 +18,18 @@ import {
   ArrowRight
 } from 'lucide-react';
 import logo from '/public/logo.png';
+import img1 from './assets/photo_11_joglounit.jpg'
+import img2 from './assets/Photo_12_joglo.jpg'
+import img3 from './assets/Photo_13_joglo.jpg'
+import img4 from './assets/Photo_4_about_section.jpg'
+import img5 from './assets/Photo_1.jpg'
+import img6 from './assets/Photo_2.jpg'
+import img7 from './assets/Photo_3.jpg'
+import img8 from './assets/Photo_5.jpg'
+import img9 from './assets/Photo_6.jpg'
+import img10 from './assets/Photo_7.jpg'
+import img11 from './assets/Photo_8.jpg'
+import img12 from './assets/Photo_9.jpg'
 
 const facilities = [
   { icon: <Waves className="w-6 h-6" />, name: 'Private Pool' },
@@ -31,12 +43,14 @@ const facilities = [
 ];
 
 const galleryImages = [
-  "https://picsum.photos/seed/villa1/1200/800",
-  "https://picsum.photos/seed/villa2/800/1200",
-  "https://picsum.photos/seed/villa3/1200/800",
-  "https://picsum.photos/seed/villa4/800/800",
-  "https://picsum.photos/seed/villa5/1200/800",
-  "https://picsum.photos/seed/villa6/800/1200",
+img5,
+  img6,
+  img7,
+  img8,
+  img9,
+  img10,
+  img11,
+  img12
 ];
 
 const HoverSlider = ({  images, alt  }: { images: string[], alt:string }) => {
@@ -191,7 +205,7 @@ export default function App() {
       <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://picsum.photos/seed/pondokmirah/1920/1080" 
+            src={img1} 
             alt="Pondok Mirah Villa" 
             className="w-full h-full object-cover scale-105"
             referrerPolicy="no-referrer"
@@ -272,7 +286,7 @@ export default function App() {
             className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl"
           >
             <img 
-              src="https://picsum.photos/seed/interior/800/1000" 
+              src={img4}
               alt="Villa Interior" 
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
@@ -285,11 +299,11 @@ export default function App() {
       <section id="units" className="py-32 px-6 bg-mirah-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <span className="text-mirah-red text-xs uppercase tracking-[0.3em] font-bold mb-4 block">Our Units</span>
-            <h2 className="text-4xl md:text-5xl font-serif text-stone-900">Choose Your Style</h2>
+            <span className="text-mirah-red text-xs uppercase tracking-[0.3em] font-bold mb-4 block">Our Villa</span>
+            <h2 className="text-4xl md:text-5xl font-serif text-stone-900">Traditional Heritage</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="max-w-3xl mx-auto">
             {/* Joglo Unit */}
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
@@ -300,65 +314,29 @@ export default function App() {
               <div className="relative aspect-[16/10] overflow-hidden rounded-2xl mb-8 shadow-lg">
                 <HoverSlider 
                   images={[
-                    "https://picsum.photos/seed/joglo1/1200/800",
-                    "https://picsum.photos/seed/joglo2/1200/800",
-                    "https://picsum.photos/seed/joglo3/1200/800"
+                    img1,
+                    img2,
+                    img3
                   ]} 
                   alt="Rumah Joglo Kayu" 
                 />
                 <div className="absolute top-6 left-6 bg-mirah-red text-mirah-white px-4 py-1.5 rounded-full text-[10px] uppercase tracking-widest font-bold z-20">
-                  Traditional Heritage
+                  Joglo Wooden House
                 </div>
               </div>
-              <h3 className="text-2xl font-serif text-stone-900 mb-4">Rumah Joglo Kayu</h3>
-              <p className="text-stone-600 font-light leading-relaxed mb-6">
-                Rasakan kehangatan arsitektur tradisional Jawa dengan sentuhan kayu jati yang elegan. 
+              <h3 className="text-3xl font-serif text-stone-900 mb-4 text-center">Rumah Joglo Kayu</h3>
+              <p className="text-stone-600 font-light leading-relaxed mb-6 text-center">
+                Rasakan kehangatan arsitektur tradisional Kupang dengan sentuhan kayu jati yang elegan. 
                 Sangat cocok bagi Anda yang mencari suasana klasik, tenang, dan menyatu dengan alam.
               </p>
-              <ul className="space-y-2 mb-8">
+              <div className="flex flex-wrap justify-center gap-6 mb-8">
                 {['Struktur Kayu Jati Pilihan', 'Ukiran Tradisional', 'Suasana Hangat & Klasik'].map((feat) => (
-                  <li key={feat} className="flex items-center gap-3 text-sm text-stone-500">
+                  <div key={feat} className="flex items-center gap-3 text-sm text-stone-500">
                     <div className="w-1 h-1 bg-mirah-red rounded-full" />
                     {feat}
-                  </li>
+                  </div>
                 ))}
-              </ul>
-            </motion.div>
-
-            {/* Modern Unit */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="group"
-            >
-              <div className="relative aspect-[16/10] overflow-hidden rounded-2xl mb-8 shadow-lg">
-                <HoverSlider 
-                  images={[
-                    "https://picsum.photos/seed/modern1/1200/800",
-                    "https://picsum.photos/seed/modern2/1200/800",
-                    "https://picsum.photos/seed/modern3/1200/800"
-                  ]} 
-                  alt="Rumah Beton Besi" 
-                />
-                <div className="absolute top-6 left-6 bg-stone-900 text-mirah-white px-4 py-1.5 rounded-full text-[10px] uppercase tracking-widest font-bold z-20">
-                  Modern Industrial
-                </div>
               </div>
-              <h3 className="text-2xl font-serif text-stone-900 mb-4">Rumah Beton Besi</h3>
-              <p className="text-stone-600 font-light leading-relaxed mb-6">
-                Desain kontemporer yang memadukan kekuatan beton dan estetika besi. 
-                Menawarkan ruang yang luas, pencahayaan alami yang maksimal, dan gaya hidup modern yang chic.
-              </p>
-              <ul className="space-y-2 mb-8">
-                {['Desain Minimalis Industrial', 'Ruang Terbuka Luas', 'Material Modern & Kokoh'].map((feat) => (
-                  <li key={feat} className="flex items-center gap-3 text-sm text-stone-500">
-                    <div className="w-1 h-1 bg-mirah-red rounded-full" />
-                    {feat}
-                  </li>
-                ))}
-              </ul>
             </motion.div>
           </div>
         </div>
@@ -409,21 +387,12 @@ export default function App() {
 
           <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
             {galleryImages.map((img, index) => (
-              <motion.div 
+              <img
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="relative group overflow-hidden rounded-xl cursor-pointer"
-              >
-                <img 
-                  src={img} 
-                  alt={`Gallery ${index}`} 
-                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-mirah-red/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </motion.div>
+                src={img}
+                alt={`Gallery ${index}`}
+                className="w-full h-auto object-cover transition-transform duration-700 hover:scale-105"
+              />
             ))}
           </div>
         </div>
