@@ -27,7 +27,6 @@ import {
 import img1 from './assets/photo_11_jogloUnit.jpg'
 import img2 from './assets/photo_12_joglo.jpg'
 import img3 from './assets/photo_13_joglo.jpg'
-import img4 from './assets/photo_4_about_section.jpg'
 import img5 from './assets/photo_1.jpg'
 import img6 from './assets/photo_2.jpg'
 import img7 from './assets/photo_3.jpg'
