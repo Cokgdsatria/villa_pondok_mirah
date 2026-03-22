@@ -17,7 +17,7 @@ import {
   Phone,
   ArrowRight
 } from 'lucide-react';
-import img1 from './assets/photo_11_joglounit.jpg'
+import img1 from './assets/photo_11_jogloUnit.jpg'
 import img2 from './assets/photo_12_joglo.jpg'
 import img3 from './assets/photo_13_joglo.jpg'
 import img4 from './assets/photo_4_about_section.jpg'
