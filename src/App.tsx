@@ -17,19 +17,18 @@ import {
   Phone,
   ArrowRight
 } from 'lucide-react';
-import logo from '/public/logo.png';
 import img1 from './assets/photo_11_joglounit.jpg'
-import img2 from './assets/Photo_12_joglo.jpg'
-import img3 from './assets/Photo_13_joglo.jpg'
-import img4 from './assets/Photo_4_about_section.jpg'
-import img5 from './assets/Photo_1.jpg'
-import img6 from './assets/Photo_2.jpg'
-import img7 from './assets/Photo_3.jpg'
-import img8 from './assets/Photo_5.jpg'
-import img9 from './assets/Photo_6.jpg'
-import img10 from './assets/Photo_7.jpg'
-import img11 from './assets/Photo_8.jpg'
-import img12 from './assets/Photo_9.jpg'
+import img2 from './assets/photo_12_joglo.jpg'
+import img3 from './assets/photo_13_joglo.jpg'
+import img4 from './assets/photo_4_about_section.jpg'
+import img5 from './assets/photo_1.jpg'
+import img6 from './assets/photo_2.jpg'
+import img7 from './assets/photo_3.jpg'
+import img8 from './assets/photo_5.jpg'
+import img9 from './assets/photo_6.jpg'
+import img10 from './assets/photo_7.jpg'
+import img11 from './assets/photo_8.jpg'
+import img12 from './assets/photo_9.jpg'
 
 const facilities = [
   { icon: <Waves className="w-6 h-6" />, name: 'Private Pool' },
@@ -133,7 +132,7 @@ export default function App() {
         className="flex items-center gap-2"
         >
           <img 
-            src={logo} 
+            src="/logo.png"
             alt="Pondok Mirah Logo"
             className="w-10 h-10 object-contain"
           />
