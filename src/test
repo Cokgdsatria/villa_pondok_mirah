@@ -1,0 +1,110 @@
+import img1 from './assets/photo_11_jogloUnit.jpg'
+import img2 from './assets/photo_12_joglo.jpg'
+import img3 from './assets/photo_13_joglo.jpg'
+import img4 from './assets/photo_4_about_section.jpg'
+import img5 from './assets/photo_1.jpg'
+import img6 from './assets/photo_2.jpg'
+import img7 from './assets/photo_3.jpg'
+import img8 from './assets/photo_5.jpg'
+import img9 from './assets/photo_6.jpg'
+import img10 from './assets/photo_7.jpg'
+import img11 from './assets/photo_8.jpg'
+import img12 from './assets/photo_9.jpg'
+
+const galleryImages = [
+img5,
+  img6,
+  img7,
+  img8,
+  img9,
+  img10,
+  img11,
+  img12
+];
+
+    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={img1} 
+            alt="Pondok Mirah Villa" 
+            className="w-full h-full object-cover scale-105"
+            referrerPolicy="no-referrer"
+          />
+          <div className="absolute inset-0 bg-black/40" />
+        </div>
+
+        <div className="relative z-10 text-center px-6">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-mirah-white/80 uppercase tracking-[0.4em] text-sm mb-6"
+          >
+            Experience Serenity
+          </motion.p>
+          <motion.h1 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="text-6xl md:text-9xl text-mirah-white font-serif mb-12"
+          >
+            Pondok Mirah
+          </motion.h1>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
+          >
+            <a 
+              href="#about"
+              className="inline-flex items-center gap-4 text-mirah-white group"
+            >
+              <span className="text-xs uppercase tracking-[0.3em] border-b border-mirah-white/30 pb-1 group-hover:border-mirah-white transition-all">
+                Discover More
+              </span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+            </a>
+          </motion.div>
+        </div>
+
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
+          <div className="w-px h-24 bg-gradient-to-b from-mirah-white/50 to-transparent" />
+        </div>
+    </section>
+
+
+    UnitSlider 
+                  images={[
+                    img1,
+                    img2,
+                    img3
+                  ]}
+
+
+
+
+                  {/* Gallery Section */}
+      <section id="gallery" className="py-32 px-6 bg-mirah-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+            <div>
+              <span className="text-mirah-red text-xs uppercase tracking-[0.3em] font-bold mb-4 block">Visual Journey</span>
+              <h2 className="text-4xl md:text-5xl font-serif text-stone-900">Gallery</h2>
+            </div>
+            <p className="text-stone-500 max-w-md text-sm leading-relaxed">
+              Intip keindahan setiap sudut Pondok Mirah melalui lensa kami. Keindahan yang menanti kehadiran Anda.
+            </p>
+          </div>
+
+          <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+            {galleryImages.map((img, index) => (
+              <img
+                key={index}
+                src={img}
+                alt={`Gallery ${index}`}
+                className="w-full h-auto object-cover transition-transform duration-700 hover:scale-105"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
